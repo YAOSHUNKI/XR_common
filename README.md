@@ -47,6 +47,7 @@ conda create -n bool_robot --override-channels -c conda-forge python=3.10 pip op
 conda activate bool_robot
 python -m pip install -e ./xr_communication_only/televuer
 python -m pip check
+python -m pip install "params-proto==2.13.2"
 python -c "from televuer import TeleVuer; print('import OK')"
 ```
 
