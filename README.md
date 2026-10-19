@@ -44,6 +44,7 @@ conda --version
 ```bash
 cd ~/bool_robot
 conda create -n bool_robot --override-channels -c conda-forge python=3.10 pip openssl -y
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 python -m pip install -e ./xr_communication_only/televuer
 python -m pip check
@@ -65,6 +66,7 @@ hostname -I
 
 ```bash
 cd ~/bool_robot
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 mkdir -p certs
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
@@ -82,6 +84,7 @@ openssl x509 -in certs/cert.pem -noout -subject -dates -ext subjectAltName
 
 ```bash
 cd ~/bool_robot
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 python vr_receive_only.py --cert certs/cert.pem --key certs/key.pem
 ```
@@ -104,6 +107,7 @@ https://192.168.0.20:8012/?ws=wss://192.168.0.20:8012
 sudo apt update
 sudo apt install -y build-essential pkg-config libusb-1.0-0-dev libturbojpeg-dev libgl1 v4l-utils
 cd ~/bool_robot
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 python -m pip install -e "./xr_communication_only/teleimager[server]"
 python -m pip check
@@ -152,6 +156,7 @@ cp xr_communication_only/teleimager/cam_config_usb_example.yaml xr_communication
 ### ターミナルA：カメラ配信
 
 ```bash
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 cd ~/bool_robot
 export XR_TELEOP_CERT="$PWD/certs/cert.pem"
@@ -168,6 +173,7 @@ teleimager-server --no-affinity
 GUIのあるUbuntuで実行してください。終了キーは `q` です。
 
 ```bash
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 cd ~/bool_robot
 teleimager-client --host 127.0.0.1
@@ -178,6 +184,7 @@ teleimager-client --host 127.0.0.1
 入力だけの受信プログラムが動いている場合は先に `Ctrl+C` で終了します。
 
 ```bash
+source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 cd ~/bool_robot
 python vr_receive_only.py \
