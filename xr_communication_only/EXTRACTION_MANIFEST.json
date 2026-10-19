@@ -1,0 +1,67 @@
+[
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/televuer/pyproject.toml",
+    "extracted": "televuer/pyproject.toml",
+    "source_sha256": "4a91d2ba987303a39631bc1564769cbef9a00f9b392d2b4f0192358d19369031"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/televuer/LICENSE",
+    "extracted": "televuer/LICENSE",
+    "source_sha256": "35c48f20a52e7c6058e3804e4aa06696c11ff0fbe2adf091f9d2dab34212e9ce"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/televuer/README.md",
+    "extracted": "televuer/README.md",
+    "source_sha256": "062e0dfe9729b97b8c8fa9920716239275ee22655d5ed0db7f5430f5571508b1"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/televuer/src/televuer/televuer.py",
+    "extracted": "televuer/src/televuer/televuer.py",
+    "source_sha256": "26fe022d1cf0e83cbca5aa7b3928d4bd2f31d15ddc5f6963ba03e7f0fa854936"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/televuer/src/televuer/__init__.py",
+    "extracted": "televuer/src/televuer/__init__.py",
+    "source_sha256": "c585573a5ee461083a4f485780be7b8b5543a7a30ba6736997a29120efa39c25"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/pyproject.toml",
+    "extracted": "teleimager/pyproject.toml",
+    "source_sha256": "a0572809565709a4012787d11c4bc63ac1cfdb4147d3f2664b8f9396994d3073"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/LICENSE",
+    "extracted": "teleimager/LICENSE",
+    "source_sha256": "a4c75918ad0cd1b978899bece9907b2db9fac527ccf183c1abea6482341191cd"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/README.md",
+    "extracted": "teleimager/README.md",
+    "source_sha256": "085d9fce14bed2e8bd051e0466bc2ad97b6406899f92688a3be1225030e81224"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/src/teleimager/image_server.py",
+    "extracted": "teleimager/src/teleimager/image_server.py",
+    "source_sha256": "61fd77cdf5d6b7e69b5e12fdf7c4be0802795ab39267f38d97b56583c4f42406"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/src/teleimager/__init__.py",
+    "extracted": "teleimager/src/teleimager/__init__.py",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/src/teleimager/image_client.py",
+    "extracted": "teleimager/src/teleimager/image_client.py",
+    "source_sha256": "ac1404b48faa29573c3c8cf1a12db803f1291572d462088790093900d71ccafe"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/src/teleimager/unitree_logo.svg",
+    "extracted": "teleimager/src/teleimager/unitree_logo.svg",
+    "source_sha256": "f2ace736d962af69eea6eb5b692c623388b7de7e041a68a2cb2d663261ec13be"
+  },
+  {
+    "source": "/Users/shunkiyao/program/g1_develpment/xr_teleoperate-main/teleop/teleimager/cam_config_server.yaml",
+    "extracted": "teleimager/cam_config_server.yaml",
+    "source_sha256": "caa674b44e16769b81490d7caa152135d0f8a3e216d0531e03cea0098322b2f6"
+  }
+]

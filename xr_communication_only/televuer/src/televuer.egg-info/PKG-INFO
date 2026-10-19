@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: televuer
+Version: 4.0.0
+Summary: XR vision and raw hand/controller communication interface
+Author-email: silencht <silencht@qq.com>
+License: MIT
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy<2.0.0
+Requires-Dist: opencv-python
+Requires-Dist: logging-mp
+Requires-Dist: params-proto==2.13.2
+Requires-Dist: vuer[all]==0.0.60
+Dynamic: license-file

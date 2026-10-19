@@ -1,0 +1,5 @@
+numpy<2.0.0
+opencv-python
+logging-mp
+params-proto==2.13.2
+vuer[all]==0.0.60

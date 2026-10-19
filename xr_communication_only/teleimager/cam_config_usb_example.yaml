@@ -1,0 +1,23 @@
+# Single USB camera. Copy to cam_config_server.yaml before starting the server.
+head_camera:
+  enable_zmq: true
+  zmq_port: 55555
+  enable_webrtc: true
+  webrtc_port: 60001
+  webrtc_codec: vp8
+  type: opencv
+  image_shape: [480, 640]
+  binocular: false
+  fps: 30
+  # Keep this quoted: the current server treats numeric zero as unset.
+  video_id: "0"
+  serial_number: null
+  physical_path: null
+
+left_wrist_camera:
+  enable_zmq: false
+  enable_webrtc: false
+
+right_wrist_camera:
+  enable_zmq: false
+  enable_webrtc: false
