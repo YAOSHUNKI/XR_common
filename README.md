@@ -153,12 +153,13 @@ cp xr_communication_only/teleimager/cam_config_usb_example.yaml xr_communication
 
 現在の実装では数値の `0` が未指定扱いになるため、`video_id: "0"` の引用符を残してください。`serial_number` と `physical_path` は `null` のままにします。これらを指定すると `video_id` より優先されます。左右手首カメラは無効化済みです。
 
+## 起動コマンド
 ### ターミナルA：カメラ配信
 
 ```bash
+cd ~/bool_robot
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
-cd ~/bool_robot
 export XR_TELEOP_CERT="$PWD/certs/cert.pem"
 export XR_TELEOP_KEY="$PWD/certs/key.pem"
 teleimager-server --no-affinity
@@ -168,18 +169,7 @@ teleimager-server --no-affinity
 
 `--no-affinity` はCPUコア番号の固定を無効化します。カメラの詳細な探索だけを行う場合は `teleimager-server --cf --no-affinity` も利用できます。
 
-### ターミナルB：Ubuntu画面で映像を確認（任意）
-
-GUIのあるUbuntuで実行してください。終了キーは `q` です。
-
-```bash
-source ~/miniconda3/etc/profile.d/conda.sh
-conda activate bool_robot
-cd ~/bool_robot
-teleimager-client --host 127.0.0.1
-```
-
-### ターミナルC：Quest向けVR画面を起動
+### ターミナルB：Quest向けVR画面を起動
 
 入力だけの受信プログラムが動いている場合は先に `Ctrl+C` で終了します。
 
@@ -187,12 +177,8 @@ teleimager-client --host 127.0.0.1
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 cd ~/bool_robot
-python vr_receive_only.py \
-  --cert certs/cert.pem \
-  --key certs/key.pem \
-  --webrtc-url https://192.168.0.20:60001/offer
+python motor_vr.py --cert certs/cert.pem --key certs/key.pem --webrtc-url https:/10.10.129.149:60001/offer
 ```
-
 `--webrtc-url` はQuest自身がアクセスするURLです。`localhost` や `127.0.0.1` ではなくUbuntuのLAN IPを指定します。
 
 Questのブラウザーで、まず以下のカメラページを開きます。証明書の警告を確認して接続を許可し、ページ内のStart操作で映像を確認します。
@@ -203,8 +189,8 @@ https://192.168.0.20:60001/
 
 確認後、次のVR画面を開きXRモードに入ります。周囲が見える状態で中央にカメラ映像を表示します。
 
-```text
-https://192.168.0.20:8012/?ws=wss://192.168.0.20:8012
+```bash
+https://10.10.129.149:8012/?ws=wss://10.10.129.149:8012
 ```
 
 通常のUSBカメラには `--binocular` を付けません。左右を横並びにしたステレオ映像は別設定が必要です。現在の受信サンプルの映像サイズ指定も640×480固定なので、ステレオ用にはサイズ・表示比率の調整が必要です。
