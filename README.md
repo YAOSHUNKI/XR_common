@@ -177,7 +177,7 @@ teleimager-server --no-affinity
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate bool_robot
 cd ~/bool_robot
-python motor_vr.py --cert certs/cert.pem --key certs/key.pem --webrtc-url https:/10.10.129.149:60001/offer
+python vr_omni.py --cert certs/cert.pem --key certs/key.pem --webrtc-url https:/10.10.129.149:60001/offer
 ```
 `--webrtc-url` はQuest自身がアクセスするURLです。`localhost` や `127.0.0.1` ではなくUbuntuのLAN IPを指定します。
 
